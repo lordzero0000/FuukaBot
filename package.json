@@ -1,0 +1,22 @@
+{
+  "name": "fuuka-bot",
+  "version": "1.0.0",
+  "description": "A discord bot.",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lordzero0000/FuukaBot.git"
+  },
+  "author": "Iuk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lordzero0000/FuukaBot/issues"
+  },
+  "homepage": "https://github.com/lordzero0000/FuukaBot#readme",
+  "dependencies": {
+    "discord.js": "^9.3.1"
+  }
+}
