@@ -18,6 +18,7 @@ var responseObject = {
   "Nah": "Nah, son.",
   "What is love?": "Baby, don't hurt me.",
   "fierro": "¡No fierro!",
+  "Fuuka you": "No.",
   "ayy": "Ayy, lmao!",
   "wat": "Say what?",
   "lol": "roflmaotntpmp",
