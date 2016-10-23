@@ -132,6 +132,6 @@ client.on("guildMemberAdd", (guild, member) => {
     guild.defaultChannel.sendMessage(`${member.user.username} se unió al grupo.`);
 });
 
-var loginKey = PROCESS.ENV.KEY;
+var loginKey = process.env.KEY;
 
 client.login(loginKey);
