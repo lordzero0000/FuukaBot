@@ -99,7 +99,7 @@ client.on('message', message => {
 	r_text[14] = "*blush* Sí...";
 	r_text[15] = "¡N-No, ¿cómo crees?!";
 	r_text[16] = "*gasp* ¡No me preguntes eso...!";
-	var i = Math.floor(14*Math.random())
+	var i = Math.floor(17*Math.random())
 	var i = r_text[i];
     message.channel.sendMessage(i);
   }
