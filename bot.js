@@ -2,6 +2,18 @@
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const express = require('express');
+const app = express();
+
+app.set('port', (process.env.PORT || 5000));
+
+//For avoidong Heroku $PORT error
+app.get('/', function(request, response) {
+  var result = 'Fuuka is running'
+  response.send(result);
+}).listen(app.get('port'), function() {
+  console.log('Fuuka is running, server is listening on port ', app.get('port'));
+});
 
 client.on('ready', () => {
   console.log('Todo listo!');
