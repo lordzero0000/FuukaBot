@@ -46,9 +46,9 @@ var responseObject = {
   ":pikachu": "X",
   ":PJsalt:": "X",
   ":heart": "X"
- // "Poni": "❤",
- // "Pony": "❤",
- // "pony": "❤"
+  "Poni": "❤",
+  "Pony": "❤",
+  "pony": "❤"
 };
 client.on('message', (message) => {
   if(responseObject[message.content]) {
@@ -85,7 +85,7 @@ client.on('message', message => {
     message.channel.sendMessage('Estos son los comandos actuales:\n"!ayuda": Muestra esta ayuda.\n"!8ball" + pregunta: Trataré de responder a tus preguntas. Ten en cuenta que la respuesta sólo pueder ser sí o no. Por favor, formula tus preguntas adecuadamente.\n"!moneda": Lanzaré una moneda al aire por ti y te diré el resultado.\n"!dado6": Tiraré un dado de seis caras.\n""!quien"" + pregunta: Desde quíén es casual a quién banear. Te diré a quién buscas.\n""!joke": Contaré un chiste. Trataré de que sea uno bueno.\n"¿Qué avatar tengo?": Mostraré tu avatar a todos.');
   }
   if (message.content.startsWith(prefix + "otp")) {
-    message.channel.sendMessage("... *sob*");
+    message.channel.sendMessage("Poni... *blush* Te amo... :two_hearts:");
   }
 });
 
@@ -144,7 +144,7 @@ client.on('message', message => {
 	r_text[7] = "Zero.";
 	r_text[8] = "Darmer.";
 	r_text[9] = "Volkner.";
-	r_text[10] = "El Poni.";
+	r_text[10] = "Poni. :two_hearts:";
 	var i = Math.floor(11*Math.random())
 	var i = r_text[i];
     message.channel.sendMessage(i);
