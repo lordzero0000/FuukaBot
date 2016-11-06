@@ -38,6 +38,11 @@ var responseObject = {
   "How do you turn this on?": "http://vignette3.wikia.nocookie.net/ageofempires/images/7/78/Image.jpg",
   "No emoji!": "https://cdn.discordapp.com/attachments/140563979498946561/224044914894176257/No_emoji.jpg",
   "rofl": "http://i2.kym-cdn.com/photos/images/original/000/296/199/9ff.gif",
+  "No memes": "https://cdn.discordapp.com/attachments/244180375172153346/244861500630630400/CX2QM4yW8AAJfO9.png",
+  "meme": "http://i.imgur.com/fN8Exqf.png",
+  "mimi": "http://i.imgur.com/xB723ux.png",
+  "Harambe": "https://i.ytimg.com/vi/oqupUsjbpdM/maxresdefault.jpg",
+  "Punished Harambe": "https://pics.onsizzle.com/punished-harambe-a-fallen-legend-3084407.png",
   "alv": "¿Alvarito?",
   ":(": ":)",
   "ayy": "Ayy, lmao!",
@@ -45,7 +50,7 @@ var responseObject = {
   "lol": "roflmaotntpmp",
   ":pikachu": "X",
   ":PJsalt:": "X",
-  ":heart": "X"
+  ":heart": "X",
   "Poni": "❤",
   "Pony": "❤",
   "pony": "❤"
@@ -66,7 +71,7 @@ client.on('message', message => {
   if (message.content === ":'v") {
     message.reply('me has decepcionado...');
   }
-  if (message.content === "meme") {
+  if (message.content === "v:") {
     message.reply('yamete!');
   }
   if (message.content === '¿Qué avatar tengo?') {
@@ -250,11 +255,11 @@ client.on('message', message => {
   }
 });
 
-client.on('message', message => {  
-  if (message.content.startsWith("https://discord.gg/")) {
-    message.reply("¡no nohrios!");
-  }
-});
+//client.on('message', message => {  
+//  if (message.content.startsWith("https://discord.gg/")) {
+//    message.reply("¡no nohrios!");
+//  }
+//});
 
 client.on('message', message => {
   if (message.content === (':ok_hand:')) {
