@@ -3,7 +3,7 @@ var cleverbot = require('cleverbot.io'),
     sendMessage = (username, message) => {
       return new Promise((resolve, reject) => {
         bot.setNick(username);
-        bot.create((err, username) => {
+        bot.create((err, response) => {
           if (err) { return reject(err); }
           bot.ask(message, (err, response) => {
             if (err) { return reject(err); }

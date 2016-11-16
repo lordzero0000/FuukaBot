@@ -205,13 +205,12 @@ client.on('message', message => {
 
 client.on('message', message => {
   let prefix = "!",
-      msg = message.content,
       user = message.author;
   // Exit and stop if it's not there
   if(!msg.startsWith(prefix)) return;
   
   if (msg.startsWith(prefix + "smart")) {
-    clever.responde(user, user).then(res => {
+    clever.responde('Fuuka', msg).then(res => {
       message.channel.sendMessage(res);
     }).catch((err) => {
       console.log(err);
