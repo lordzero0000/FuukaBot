@@ -4,6 +4,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const express = require('express');
 const app = express();
+const clever = require('./cleverScript');
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -199,6 +200,22 @@ client.on('message', message => {
 	var i = Math.floor(3*Math.random())
 	var i = r_text[i];
     message.channel.sendMessage(i);
+  }
+});
+
+client.on('message', message => {
+  let prefix = "!",
+      msg = message.content,
+      user = message.author;
+  // Exit and stop if it's not there
+  if(!msg.startsWith(prefix)) return;
+  
+  if (msg.startsWith(prefix + "smart")) {
+    clever.sendMessage(user, user).then(res => {
+      message.channel.sendMessage(res);
+    }).catch((err) => {
+      message.channel.sendMessage(`Lo siento ${user}, soy demasiado inteligente para ti.`);
+    });
   }
 });
 
