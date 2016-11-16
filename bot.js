@@ -205,7 +205,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   let prefix = "!",
-      user = message.author;
+      msg = message.content;
   // Exit and stop if it's not there
   if(!msg.startsWith(prefix)) return;
   
