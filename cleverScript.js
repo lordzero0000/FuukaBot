@@ -1,7 +1,7 @@
 var cleverbot = require('cleverbot.io'),
     bot = new cleverbot(process.env.CLEVERBOT_API_USER, process.env.CLEVERBOT_API_KEY),
     sendMessage = (username, message) => {
-      var promise = new Promise((resolve, reject) => {
+      return new Promise((resolve, reject) => {
         bot.setNick(username);
         bot.create((err, username) => {
           if (err) { return reject(err); }
@@ -11,7 +11,6 @@ var cleverbot = require('cleverbot.io'),
           });
         });
       });
-      return promise;
     };
 
 

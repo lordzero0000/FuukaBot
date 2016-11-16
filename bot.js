@@ -214,6 +214,7 @@ client.on('message', message => {
     clever.responde(user, user).then(res => {
       message.channel.sendMessage(res);
     }).catch((err) => {
+      console.log(err);
       message.channel.sendMessage(`Lo siento ${user}, soy demasiado inteligente para ti.`);
     });
   }
