@@ -211,7 +211,7 @@ client.on('message', message => {
   if(!msg.startsWith(prefix)) return;
   
   if (msg.startsWith(prefix + "smart")) {
-    clever.sendMessage(user, user).then(res => {
+    clever.responde(user, user).then(res => {
       message.channel.sendMessage(res);
     }).catch((err) => {
       message.channel.sendMessage(`Lo siento ${user}, soy demasiado inteligente para ti.`);
