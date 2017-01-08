@@ -4,6 +4,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const express = require('express');
 const app = express();
+const clever = require('./cleverScript');
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -43,7 +44,10 @@ var responseObject = {
   "mimi": "http://i.imgur.com/xB723ux.png",
   "Harambe": "https://i.ytimg.com/vi/oqupUsjbpdM/maxresdefault.jpg",
   "Punished Harambe": "https://pics.onsizzle.com/punished-harambe-a-fallen-legend-3084407.png",
+  "Poi": "http://anohito.tw/poi/images/POI_01_B.png",
   "alv": "¿Alvarito?",
+  "Uni": ">:(",
+  "Unipax": ">:(",
   ":(": ":)",
   "ayy": "Ayy, lmao!",
   "wat": "Say what?",
@@ -154,6 +158,10 @@ client.on('message', message => {
 	var i = r_text[i];
     message.channel.sendMessage(i);
   }
+  if (message.content.startsWith(prefix + "w.")) {
+	message.channel.sendMessage("http://www.anime-evo.net/wp-content/uploads/2016/07/ReZero_14_5.jpg");
+	message.channel.sendMessage(":)");
+  }
 });
 
 client.on('message', message => {
@@ -199,6 +207,22 @@ client.on('message', message => {
 	var i = Math.floor(3*Math.random())
 	var i = r_text[i];
     message.channel.sendMessage(i);
+  }
+});
+
+client.on('message', message => {
+  let prefix = "!",
+      msg = message.content;
+  // Exit and stop if it's not there
+  if(!msg.startsWith(prefix)) return;
+  
+  if (msg.startsWith(prefix + "smart")) {
+    clever.responde('Fuuka', msg).then(res => {
+      message.channel.sendMessage(res);
+    }).catch((err) => {
+      console.log(err);
+      message.channel.sendMessage(`Lo siento ${user}, soy demasiado inteligente para ti.`);
+    });
   }
 });
 
