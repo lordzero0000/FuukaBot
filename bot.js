@@ -158,10 +158,10 @@ client.on('message', message => {
 	var i = r_text[i];
     message.channel.sendMessage(i);
   }
-  if (message.content.startsWith(prefix + "w.")) {
-	message.channel.sendMessage("http://www.anime-evo.net/wp-content/uploads/2016/07/ReZero_14_5.jpg");
-	message.channel.sendMessage(":)");
-  }
+//  if (message.content.startsWith(prefix + "w.")) {
+//	message.channel.sendMessage("http://www.anime-evo.net/wp-content/uploads/2016/07/ReZero_14_5.jpg");
+//	message.channel.sendMessage(":)");
+//  }
 });
 
 client.on('message', message => {
